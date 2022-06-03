@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- By Xlator /°-°\ and SkyX [ID FR] **_** -->
+<!-- <Arduinor-Nanor Project> Web DEV Fullstack Part -->
+
+<!-- Loader IMG : https://iconscout.com/lottie/infinity-5065083 -->
+<html lang="en">
+
+<head>
+    <title>Arduinor Nanor©</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/nolan/96/arduino.png" />
+    <link rel="stylesheet" href="./public/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Include Bootstrap CSS & JS : -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <!-- End of Include Bootstrap CSS & JS -->   
+     
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta description="Arduino project is an internationnal and community guest webAPP !" autors="Xlator /°-°\ & SkyX [ID FR] **_**" license="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" />
+
+    <!-- Include CSS Icon Library -->
+    <link href='https://css.gg/bell.css' rel='stylesheet'>
+    <link href='https://css.gg/add-r.css' rel='stylesheet'>
+    <link href='https://css.gg/heart.css' rel='stylesheet'>
+    <link href='https://css.gg/home-alt.css' rel='stylesheet'>
+    <link href='https://css.gg/more-alt.css' rel='stylesheet'>
+    <link href='https://css.gg/arrow-down.css' rel='stylesheet'>
+    <link href='https://css.gg/mail-reply.css' rel='stylesheet'>
+    <link href='https://css.gg/home.css' rel='stylesheet'>
+    <link href='https://css.gg/calendar-today.css' rel='stylesheet'>
+    <link href='https://css.gg/close.css' rel='stylesheet'>
+    <link href='https://css.gg/arrow-right.css' rel='stylesheet'>
+    <link href='https://css.gg/arrow-left.css' rel='stylesheet'>
+    <link href='https://css.gg/menu-grid-o.css' rel='stylesheet'>
+    <link href='https://css.gg/math-plus.css' rel='stylesheet'>
+    <link href='https://css.gg/eye.css' rel='stylesheet'>
+    <link href='https://css.gg/arrow-top-right.css' rel='stylesheet'>
+    <!-- End of Include CSS Icon Library -->
+
+</head>
+
+  <body>
+    <div class="nav-bar">
+      <a href="#"><img src="https://img.icons8.com/nolan/96/arduino.png" class="logo"></a>
+  
+      <input type="text" class="search-bar" placeholder="What have you in your mind, today ?">
+      <i class="gg-search"></i>
+
+      <div class="modal right fade" id="add-post-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="gg-close"></i></button>
+                    <h4 class="modal-title">Add a post</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div id="modal-account-content">
+                      <ul class="list-group">
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                              Please connect at your <code>Arduinor-Nanor's</code> account to do more post with picture & code !
+                              Click on the anonymous avatar and after on the login's button et that's it !
+                              <br>
+                          </li>
+                      </ul>
+
+                      <br><img width="270" src="https://cdni.iconscout.com/illustration/premium/thumb/create-work-plan-2081671-1756035.png">
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="modal right fade" id="notification-modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="gg-close"></i></button>
+                      <h4 class="modal-title">Notifications</h4>
+                  </div>
+
+                  <div class="modal-body">
+                    <div id="notifications_area"></div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <a data-toggle="modal" data-target="#notification-modal"><i class="gg-bell"></i></a>
+        <a data-toggle="modal" data-target="#settings-modal"><i class="gg-menu-grid-o"></i></a>
+        <a data-toggle="modal" data-target="#account-modal"><img id="avatar_icon" src="https://economix.fr/wp-content/uploads/2021/11/anonymous.gif" class="user-icon"></a>
+        
+        <div class="modal right fade" id="settings-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="gg-close"></i></button>
+                      <h4 class="modal-title">General Settings :</h4>
+                  </div>
+
+                  <div class="modal-body">
+                      <div id="modal-account-content">
+                        <ul class="list-group">
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                              Please connect at your <code>Arduinor-Nanor's</code> account to do more post with picture & code !
+                              Click on the anonymous avatar and after on the login's button et that's it !
+                              <br>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+        
+        <div class="modal right fade" id="account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="gg-close"></i></button>
+                        <h4 class="modal-title">My Account</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <div id="modal-account-content">
+                            <img src="https://cdni.iconscout.com/illustration/premium/thumb/accounting-4089617-3384073.png" width="270px"/><br>
+
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Please connect at your <code>Arduinor-Nanor's</code> account to access at setting of your personnal account !<br><br>
+                                    <div class="open-login-modal"><button type="button" class="btn btn-primary">Login at your account !</button></div>
+
+                                    <div class="display"></div>   
+
+                                    <div class="overlay">
+                                      <div class="content">
+                                        <div id="close"><i class="gg-close"></i></div>
+                                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/login-3403472-2838358.png" width="270px"/><br>
+                                        
+                                        <input type="text" class="form-control" placeholder="Enter your username here !" id="login_username"/><br>
+                                        <input type="password" class="form-control" placeholder="Enter your password here !" id="login_password"/><br>
+                                        <p id="login_error_msg"></p>
+                                        <button onclick="login();" class="btn btn-primary">Log-in !</button>
+                                      </div>
+                                    </div>  
+                                </li>
+                            </ul>
+
+                            <ul class="list-group">
+                              <li class="list-group-item d-flex justify-content-between align-items-center">
+                                  If you don't have an <code>Arduinor-Nanor's</code> account please create them here !<br><br>
+                                  <div class="open-sign-in-modal"><button type="button" class="btn btn-primary">Create your account !</button></div>
+
+                                  <div class="display"></div>   
+
+                                  <div class="overlay-2">
+                                    <div class="content">
+                                      <div id="close-2"><i class="gg-close"></i></div>    
+                                      <img width="270px" src="https://cdni.iconscout.com/illustration/premium/thumb/sign-in-2672525-2218271.png">
+                                      
+                                      <input id="sign-in-username" type="text" class="form-control" placeholder="Enter a new username here !"/><br>
+                                      <input id="sign-in-password" type="password" class="form-control" placeholder="Enter a new password here !"/><br>
+
+                                      <p id="login_error_msg"></p>
+                                      <button onclick="sign_in()" class="btn btn-primary">Sign-in !</button>
+                                    </div>
+                                  </div>  
+                              </li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+        <br><div class="tab-menu">
+          <button class="tab-menu-link is-active" data-content="item-2">
+            <span data-title="item-2">Explore</span>
+          </button>
+
+          <button class="tab-menu-link" data-content="item-3">
+            <span data-title="item-3">Dev & Community</span>
+          </button>
+
+          <button class="tab-menu-link" data-content="item-4">
+            <span data-title="item-4">Admin & Contributors</span>
+          </button>
+        </div>
+    </div>
+
+    <div class="content_section">
+      <div class="tab">                
+          <div class="tab-bar-content is-active" id="item-2">
+            <a data-toggle="modal" class="add-post-button" data-target="#add-post-modal"><button><i class="gg-math-plus"></i></button></a>
+          </div>
+
+          <div class="tab-bar-content" id="item-3">
+            <div id="community"></div>
+          </div>
+          
+          <div class="tab-bar-content" id="item-4">
+            <div id="users-area"></div>
+          </div>
+      </div>
+  </div>
+  <script type="text/javascript" src="./public/js/front/index.js"></script>
+
+</body>
+
+<!-- <footer class="text-center text-white">
+  <div class="container pt-4">
+    <section class="mb-4">
+      <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+      <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/SkyX-ID-FR/Arduinor-Nanor-Project" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+    </section>
+  </div>
+
+  <div class="text-center text-dark p-3">
+      Copyright© Arduinor Nanor© - Version <span class="label label-primary">BETA</span> <br> 
+      <a href="../cross_website/index.html" target="_blank">Home</a> -
+      <a href="../cross_website/FAQ.html" target="_blank">FAQ</a> -
+      <a href="../cross_website/API/API_Doc.html" target="_blank">API</a> -
+      <a href="../cross_website/contact.html" target="_blank">Contact</a> -
+      <a href="../cross_website/about.html" target="_blank">About</a> 
+  </div>
+</footer> -->
+
+
+</html>
+<!-- END -->
