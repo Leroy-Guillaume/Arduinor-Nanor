@@ -1,2 +1,2 @@
 # Arduinor-Nanor
-<h1>Projet en cours<h1>
+<h2>Projet en cours ...<h2>
